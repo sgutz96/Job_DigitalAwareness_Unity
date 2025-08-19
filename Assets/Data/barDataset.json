@@ -1,0 +1,8 @@
+{
+  "name": "El Faro Nocturno",
+  "location": "Calle Guillermo de Ocaña #310",
+  "owner": "Don Ernesto",
+  "menu": ["cerveza artesanal", "cócteles", "hamburguesas", "tapas"],
+  "hours": "5 pm - 2 am",
+  "staff": ["Juan (bartender)", "Sofía (cantante)", "Mario (cocinero)"]
+}
