@@ -45,7 +45,7 @@ public class VoiceToTextConsole : MonoBehaviour
     {
         if (recognizer.Status == SpeechSystemStatus.Running) return;
         buffer.Clear();
-        recognizer.Start();
+        recognizer.Start(); 
         Debug.Log("🎙️ Dictado iniciado...");
     }
 
