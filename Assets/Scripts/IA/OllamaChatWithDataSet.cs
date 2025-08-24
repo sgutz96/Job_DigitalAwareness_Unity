@@ -18,6 +18,11 @@ public class OllamaChatWithDataSet : MonoBehaviour
     public TextAsset barDatasetFile; // arrastra el JSON desde Unity
     private BarData barData;
 
+    public Manager manager;
+
+    public bool isThink = false;
+
+
     void Start()
     {
         if (barDatasetFile != null)
@@ -64,6 +69,7 @@ Información del bar:
 
     public void SendPrompt(string userInput)
     {
+        isThink = false;
         StartCoroutine(SendMessageToOllama(userInput));
     }
 
@@ -139,8 +145,12 @@ Información del bar:
                 Debug.Log("Reacción: " + chatResult.reaction);
                 Debug.Log("Tiempo de hablar: " + chatResult.talkDuration + "s");
 
+
                 // 🔹 Aquí puedes llamar a tus animaciones
-                // AnimateCharacter(chatResult.reaction, chatResult.talkDuration);
+                manager.AnimateCharacter(chatResult.reaction, chatResult.talkDuration);
+                //manager.AnimateCharacter(chatResult.reaction, chatResult.talkDuration);
+
+                isThink=true;
             }
         }
     }
