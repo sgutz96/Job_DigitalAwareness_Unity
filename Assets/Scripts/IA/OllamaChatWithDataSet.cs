@@ -140,7 +140,8 @@ Información del bar:
 
                 // 6. Procesar respuesta con reacción y duración
                 ChatResult chatResult = ProcessResponse(finalResponse);
-
+                Debug.Log("-------------------------------------");
+                Debug.Log("User: " + userInput);
                 Debug.Log("Mistral: " + chatResult.text);
                 Debug.Log("Reacción: " + chatResult.reaction);
                 Debug.Log("Tiempo de hablar: " + chatResult.talkDuration + "s");
@@ -148,9 +149,10 @@ Información del bar:
 
                 // 🔹 Aquí puedes llamar a tus animaciones
                 manager.AnimateCharacter(chatResult.reaction, chatResult.talkDuration);
+                manager.ChatRespuesta.text = chatResult.text;
                 //manager.AnimateCharacter(chatResult.reaction, chatResult.talkDuration);
 
-                isThink=true;
+                isThink =true;
             }
         }
     }

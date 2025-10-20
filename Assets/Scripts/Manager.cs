@@ -15,7 +15,9 @@ public class Manager : MonoBehaviour
     [SerializeField]
     private TMP_InputField inputField;
 
+
     public Animator animator;
+    public TMP_Text ChatRespuesta;
 
     private void Awake()
     {
@@ -40,8 +42,12 @@ public class Manager : MonoBehaviour
     public void SentTextmeshPro()
     {
         string text = inputField.text;
-        Ollama.SendPrompt(text);
-        inputField.text = null;
+        if (text != "")
+        {
+            Ollama.SendPrompt(text);
+            inputField.text = null;
+
+        }
     }
 
     internal void AnimateCharacter(OllamaChatWithDataSet.Reaction reaction, float t )
