@@ -1,0 +1,221 @@
+{
+  "universidad": {
+    "nombre": "Universidad de San Buenaventura",
+    "sigla": "USB",
+    "sede": "Bogotá",
+    "programas": [
+      {
+        "nombre": "Ingeniería de Sistemas",
+        "codigo_SNIES": "2520",
+        "titulo_otorgado": "Ingeniero(a) de Sistemas",
+        "duracion": "10 Semestres",
+        "modalidad": "Presencial",
+        "jornada": "Diurna",
+        "registro_calificado": {
+          "resolucion": "015967",
+          "fecha": "18 de diciembre de 2019",
+          "vigencia": "7 años"
+        },
+        "costo": {
+          "valor_semestre": 6377000,
+          "moneda": "COP",
+          "nota": "Costos sujetos a resolución vigente"
+        },
+        "plan_de_estudios": {
+          "version": "2013-2 al 2020-2",
+          "enlace": "Disponible en sitio web oficial"
+        },
+        "descripcion": "Programa enfocado en innovación, tecnología y comunicación. Forma profesionales capaces de diseñar, construir e implementar soluciones informáticas seguras, basadas en TIC, con espíritu emprendedor, crítico y ético.",
+        "perfil_egresado": [
+          "Utiliza técnicas y herramientas de software y gestión de datos.",
+          "Diseña e implementa sistemas de información.",
+          "Identifica necesidades de negocio para desarrollar soluciones informáticas.",
+          "Adopta nuevas tecnologías en su ejercicio profesional.",
+          "Integra conocimientos interdisciplinarios para innovación y liderazgo.",
+          "Aplica metodologías de investigación y TIC para resolver problemas."
+        ],
+        "campos_de_accion": [
+          "Gestión y liderazgo de proyectos informáticos.",
+          "Creación de empresas TIC.",
+          "Gestión de proyectos de ingeniería con enfoque en emprendimiento y trabajo en equipo."
+        ]
+      },
+      {
+        "nombre": "Ingeniería Electrónica",
+        "codigo_SNIES": "2901",
+        "titulo_otorgado": "Ingeniero(a) Electrónico(a)",
+        "duracion": "10 Semestres",
+        "modalidad": "Presencial",
+        "jornada": "Diurna",
+        "registro_calificado": {
+          "resolucion": "024200",
+          "fecha": "23 de diciembre de 2022",
+          "vigencia": "7 años"
+        },
+        "acreditacion_alta_calidad": {
+          "resolucion": "024200",
+          "fecha": "23 de diciembre de 2022",
+          "vigencia": "4 años"
+        },
+        "costo": {
+          "valor_semestre": 6405000,
+          "moneda": "COP"
+        },
+        "descripcion": "Forma profesionales con conocimientos en telecomunicaciones, control, automatización, sistemas digitales y robótica, capaces de diseñar e implementar soluciones electrónicas innovadoras.",
+        "perfil_egresado": [
+          "Define modelos físico-matemáticos para análisis y diseño electrónico.",
+          "Diseña e implementa procesos de automatización y control industrial.",
+          "Gestiona redes de computadores y comunicaciones industriales.",
+          "Realiza investigación aplicada en electrónica.",
+          "Desarrolla instrumentos y sistemas electrónicos aplicados a la medicina e industria."
+        ],
+        "campos_de_accion": [
+          "Telecomunicaciones",
+          "Automatización y control",
+          "Diseño y desarrollo de sistemas electrónicos",
+          "Consultorías tecnológicas",
+          "Investigación científica y tecnológica"
+        ]
+      },
+      {
+        "nombre": "Ingeniería Aeronáutica",
+        "codigo_SNIES": "4498",
+        "titulo_otorgado": "Ingeniero(a) Aeronáutico(a)",
+        "duracion": "10 Semestres",
+        "modalidad": "Presencial",
+        "jornada": "Mixta",
+        "registro_calificado": {
+          "resolucion": "15700",
+          "fecha": "18 de diciembre de 2019",
+          "vigencia": "7 años"
+        },
+        "costo": {
+          "valor_semestre": 10474000,
+          "moneda": "COP"
+        },
+        "descripcion": "Forma ingenieros con enfoque investigativo y socio-humanístico, expertos en diseño, mantenimiento y gestión aeronáutica con visión global, liderazgo y compromiso ambiental.",
+        "perfil_egresado": [
+          "Diseño y cálculo de aeronaves, sistemas y componentes.",
+          "Gestión y mantenimiento aeronáutico bajo normativa vigente.",
+          "Certificación de productos y organizaciones aeronáuticas.",
+          "Desarrollo de sistemas aeroespaciales y energías alternativas.",
+          "Aplicación de industria 4.0 al sector aeronáutico."
+        ],
+        "campos_de_accion": [
+          "Diseño y fabricación aeronáutica",
+          "Mantenimiento y operación aérea",
+          "Certificación aeronáutica",
+          "Gestión y consultoría del sector",
+          "Energías alternativas y sostenibilidad",
+          "Innovación e investigación aeroespacial"
+        ]
+      },
+      {
+        "nombre": "Ingeniería Mecatrónica",
+        "codigo_SNIES": "6647",
+        "titulo_otorgado": "Ingeniero(a) Mecatrónico(a)",
+        "duracion": "10 Semestres",
+        "modalidad": "Presencial",
+        "jornada": "Diurna",
+        "registro_calificado": {
+          "resolucion": "024842",
+          "fecha": "30 de diciembre de 2022",
+          "vigencia": "7 años"
+        },
+        "acreditacion_alta_calidad": {
+          "resolucion": "024842",
+          "fecha": "30 de diciembre de 2022",
+          "vigencia": "4 años"
+        },
+        "costo": {
+          "valor_semestre": 8244000,
+          "moneda": "COP"
+        },
+        "descripcion": "Integra mecánica, electrónica, control e informática para diseñar y desarrollar sistemas automatizados, robótica y maquinaria inteligente aplicada a la industria.",
+        "perfil_egresado": [
+          "Integra principios de mecánica, electrónica y computación.",
+          "Diseña sistemas automatizados y de control.",
+          "Desarrolla soluciones en robótica y manufactura flexible.",
+          "Aplica conocimientos en automatización, mantenimiento y robótica."
+        ],
+        "campos_de_accion": [
+          "Diseño y programación de robots industriales y móviles",
+          "Automatización de procesos industriales",
+          "Desarrollo de productos mecatrónicos",
+          "Ingeniería de proyectos",
+          "Consultoría tecnológica",
+          "Sistemas de control y mantenimiento industrial"
+        ]
+      },
+      {
+        "nombre": "Ingeniería Multimedia",
+        "codigo_SNIES": "103343",
+        "titulo_otorgado": "Ingeniero(a) Multimedia",
+        "duracion": "10 Semestres",
+        "modalidad": "Presencial",
+        "jornada": "Diurna",
+        "registro_calificado": {
+          "resolucion": "019471",
+          "fecha": "19 de octubre de 2023"
+        },
+        "costo": {
+          "valor_semestre": 7902000,
+          "moneda": "COP"
+        },
+        "descripcion": "Combina creatividad, arte y tecnología en animación 2D/3D, realidad virtual y aumentada, videojuegos y producción multimedia.",
+        "objetos_de_estudio": [
+          "Diseños y animaciones en 2D y 3D",
+          "Realidad Virtual y Aumentada, Videojuegos y Redes Multimedia",
+          "Arte Multimedia (Cine, televisión y radio)",
+          "Contenidos multimedia (Web, móviles, televisión digital)"
+        ],
+        "perfil_egresado": [
+          "Desarrolla animaciones y contenidos multimedia.",
+          "Participa en proyectos de realidad virtual y aumentada.",
+          "Aplica fundamentos de arte multimedia.",
+          "Integra contenidos digitales multiplataforma.",
+          "Contribuye a la evolución del sector multimedia y TIC."
+        ],
+        "campos_de_accion": [
+          "Producción audiovisual y multimedia",
+          "Diseño 2D/3D y videojuegos",
+          "Desarrollo de contenidos interactivos",
+          "Realidad virtual y aumentada",
+          "Entretenimiento digital y TIC"
+        ]
+      },
+      {
+        "nombre": "Ingeniería de Sonido",
+        "codigo_SNIES": "8453",
+        "titulo_otorgado": "Ingeniero(a) de Sonido",
+        "duracion": "10 Semestres",
+        "modalidad": "Presencial",
+        "jornada": "Diurna",
+        "registro_calificado": {
+          "resolucion": "014810",
+          "fecha": "17 de diciembre de 2019",
+          "vigencia": "7 años"
+        },
+        "costo": {
+          "valor_semestre": 9763000,
+          "moneda": "COP"
+        },
+        "descripcion": "Programa centrado en acústica, diseño de sistemas de sonido y producción audiovisual. Fomenta la investigación, el enfoque humanista y la formación práctica en la industria del audio.",
+        "perfil_egresado": [
+          "Desarrolla proyectos de consultoría en acústica.",
+          "Diseña recintos y soluciones de aislamiento sonoro.",
+          "Crea hardware y software de procesamiento de sonido.",
+          "Opera sistemas de refuerzo sonoro en vivo.",
+          "Produce y postproduce audio para medios audiovisuales."
+        ],
+        "campos_de_accion": [
+          "Acústica y control de ruido",
+          "Diseño de sistemas de sonido",
+          "Producción audiovisual y musical",
+          "Sonido en vivo y refuerzo sonoro",
+          "Desarrollo tecnológico en audio"
+        ]
+      }
+    ]
+  }
+}

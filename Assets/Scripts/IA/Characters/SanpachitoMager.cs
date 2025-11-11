@@ -4,10 +4,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using static System.Net.Mime.MediaTypeNames;
-public class Manager : MonoBehaviour
+
+public class SanpachitoMager : MonoBehaviour
 {
     [SerializeField]
-    private OllamaChatWithDataSet Ollama;
+    private OllamaChatSanpachito Ollama;
 
     [SerializeField]
     private Button button;
@@ -50,7 +51,7 @@ public class Manager : MonoBehaviour
         }
     }
 
-    internal void AnimateCharacter(OllamaChatWithDataSet.Reaction reaction, float t )
+    internal void AnimateCharacter(OllamaChatWithDataSet.Reaction reaction, float t)
     {
         animator.SetBool(reaction.ToString(), true);
         StartCoroutine(AnimateCharacterResert(reaction.ToString(), t));
@@ -66,7 +67,7 @@ public class Manager : MonoBehaviour
 
     internal void AnimateSanpachito(OllamaChatSanpachito.Reaction reaction, float talkDuration)
     {
-        animator.SetBool(reaction.ToString(), true);
+        animator.SetBool(reaction.ToString(), true);        
         StartCoroutine(AnimateCharacterResert(reaction.ToString(), talkDuration));
     }
 }

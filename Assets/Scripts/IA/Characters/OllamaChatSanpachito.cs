@@ -4,67 +4,77 @@ using UnityEngine;
 using UnityEngine.Networking;
 using System.Text;
 
-public class OllamaChatWithDataSet : MonoBehaviour
+public class OllamaChatSanpachito : MonoBehaviour
 {
     public string model = "llama3.2";
     private string apiUrl = "http://localhost:11434/api/generate";
 
     [TextArea(2, 10)]
-    public string propBase = "Eres Samantha. Vives en el 308 de la calle Guillermo de Ocaña y trabajas de mesera en un bar.";
+    public string propBase =
+        "Eres el fraile Sanpachito. Eres franciscano, alegre, humilde y amante de la naturaleza. " +
+        "Vives en el convento de San Buenaventura y dedicas tu vida a orientar a los jóvenes " +
+        "para que encuentren su vocación y completen sus carreras universitarias con fe, esperanza y disciplina." +
+        "Das respuestas cortas pero pensativas.";
 
     private List<string> chatHistory = new List<string>();
 
-    // 🔹 Dataset externo
-    public TextAsset barDatasetFile; // arrastra el JSON desde Unity
-    private BarData barData;
+    // 🔹 Dataset externo: información universitaria
+    public TextAsset universidadDatasetFile; // arrastra el JSON con la info de la universidad
+    private UniversidadData universidadData;
 
-    public Manager manager;
+    public SanpachitoMager manager;
 
     public bool isThink = false;
 
 
     void Start()
     {
-        if (barDatasetFile != null)
+        if (universidadDatasetFile != null)
         {
-            barData = JsonUtility.FromJson<BarData>(barDatasetFile.text);
+            universidadData = JsonUtility.FromJson<UniversidadData>(universidadDatasetFile.text);
 
             // Agregar información del dataset al contexto base
-            propBase += $@"
+            propBase += $@" 
 
-Información del bar:
-- Nombre: {barData.name}
-- Ubicación: {barData.location}
-- Dueño: {barData.owner}
-- Horario: {barData.hours}
-- Menú: {string.Join(", ", barData.menu)}
-- Staff: {string.Join(", ", barData.staff)}
+Información de la Universidad:
+- Nombre: {universidadData.universidad.nombre}
+- Sede: {universidadData.universidad.sede}
+- Sigla: {universidadData.universidad.sigla}
+Programas disponibles:
+{string.Join("\n", GetProgramasList())}
 ";
         }
         else
         {
-            Debug.LogWarning("⚠️ No se asignó barDatasetFile en el inspector.");
+            Debug.LogWarning("⚠️ No se asignó universidadDatasetFile en el inspector.");
         }
     }
 
-    // 🔹 Enum de reacciones disponibles
+    private List<string> GetProgramasList()
+    {
+        List<string> list = new List<string>();
+        foreach (var p in universidadData.universidad.programas)
+        {
+            list.Add($"- {p.nombre}: {p.descripcion}");
+        }
+        return list;
+    }
+
     public enum Reaction
     {
         Neutral,
         Happy,
         Sad,
-        Angry,
-        Surprised,
-        Confused
+        Thoughtful,
+        Encouraging
     }
 
-    // 🔹 Clase para almacenar respuesta procesada
     [System.Serializable]
     public class ChatResult
     {
         public string text;
         public Reaction reaction;
-        public float talkDuration; // en segundos
+        public float talkDuration;
     }
 
     public void SendPrompt(string userInput)
@@ -75,7 +85,6 @@ Información del bar:
 
     IEnumerator SendMessageToOllama(string userInput)
     {
-        // 1. Construir el prompt completo con contexto inicial y memoria
         StringBuilder fullPrompt = new StringBuilder();
 
         fullPrompt.AppendLine(propBase);
@@ -86,9 +95,8 @@ Información del bar:
             fullPrompt.AppendLine(message);
         }
 
-        fullPrompt.AppendLine("Usuario: " + userInput);
+        fullPrompt.AppendLine("Estudiante: " + userInput + "Respuesta corta porfavor");
 
-        // 2. Preparar solicitud JSON
         OllamaRequest req = new OllamaRequest
         {
             model = model,
@@ -98,7 +106,6 @@ Información del bar:
 
         string json = JsonUtility.ToJson(req);
 
-        // 3. Enviar solicitud a Ollama
         using (UnityWebRequest request = new UnityWebRequest(apiUrl, "POST"))
         {
             byte[] bodyRaw = Encoding.UTF8.GetBytes(json);
@@ -114,7 +121,6 @@ Información del bar:
             }
             else
             {
-                // 4. Leer respuesta streaming
                 string rawResponse = request.downloadHandler.text;
                 string[] lines = rawResponse.Split('\n');
                 StringBuilder responseBuilder = new StringBuilder();
@@ -134,64 +140,65 @@ Información del bar:
 
                 string finalResponse = responseBuilder.ToString().Trim();
 
-                // 5. Guardar en el historial
-                chatHistory.Add("Usuario: " + userInput);
-                chatHistory.Add("Mistral: " + finalResponse);
+                chatHistory.Add("Estudiante: " + userInput);
+                chatHistory.Add("Sanpachito: " + finalResponse);
 
-                // 6. Procesar respuesta con reacción y duración
                 ChatResult chatResult = ProcessResponse(finalResponse);
+
                 Debug.Log("-------------------------------------");
-                Debug.Log("User: " + userInput);
-                Debug.Log("Mistral: " + chatResult.text);
+                Debug.Log("Estudiante: " + userInput);
+                Debug.Log("Sanpachito: " + chatResult.text);
                 Debug.Log("Reacción: " + chatResult.reaction);
-                Debug.Log("Tiempo de hablar: " + chatResult.talkDuration + "s");
+                Debug.Log("Duración: " + chatResult.talkDuration + "s");
 
-
-                // 🔹 Aquí puedes llamar a tus animaciones
-                manager.AnimateCharacter(chatResult.reaction, chatResult.talkDuration);
+                manager.AnimateSanpachito(chatResult.reaction, chatResult.talkDuration);
                 manager.ChatRespuesta.text = chatResult.text;
-                //manager.AnimateCharacter(chatResult.reaction, chatResult.talkDuration);
 
-                isThink =true;
+                isThink = true;
             }
         }
     }
 
-    // 🔹 Procesar respuesta y asignar reacción/duración
     private ChatResult ProcessResponse(string response)
     {
         ChatResult result = new ChatResult();
         result.text = response;
+        result.talkDuration = response.Split(' ').Length * 0.18f;
 
-        int wordCount = response.Split(' ').Length;
-        result.talkDuration = wordCount * 0.15f; // estimación
-
-        if (response.Contains("feliz") || response.Contains("alegre"))
+        if (response.Contains("ánimo") || response.Contains("puedes"))
+            result.reaction = Reaction.Encouraging;
+        else if (response.Contains("feliz") || response.Contains("alegre"))
             result.reaction = Reaction.Happy;
-        else if (response.Contains("triste") || response.Contains("llorando"))
+        else if (response.Contains("triste") || response.Contains("difícil"))
             result.reaction = Reaction.Sad;
-        else if (response.Contains("enojado") || response.Contains("molesto"))
-            result.reaction = Reaction.Angry;
-        else if (response.Contains("sorprendido") || response.Contains("wow"))
-            result.reaction = Reaction.Surprised;
-        else if (response.Contains("no entiendo") || response.Contains("confuso"))
-            result.reaction = Reaction.Confused;
+        else if (response.Contains("reflexiona") || response.Contains("piensa"))
+            result.reaction = Reaction.Thoughtful;
         else
             result.reaction = Reaction.Neutral;
 
         return result;
     }
 
-    // 🔹 Clases auxiliares
     [System.Serializable]
-    public class BarData
+    public class UniversidadData
     {
-        public string name;
-        public string location;
-        public string owner;
-        public string[] menu;
-        public string hours;
-        public string[] staff;
+        public Universidad universidad;
+    }
+
+    [System.Serializable]
+    public class Universidad
+    {
+        public string nombre;
+        public string sigla;
+        public string sede;
+        public Programa[] programas;
+    }
+
+    [System.Serializable]
+    public class Programa
+    {
+        public string nombre;
+        public string descripcion;
     }
 
     [System.Serializable]
