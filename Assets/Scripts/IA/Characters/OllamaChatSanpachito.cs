@@ -53,12 +53,15 @@ Programas disponibles:
     private List<string> GetProgramasList()
     {
         List<string> list = new List<string>();
+
         foreach (var p in universidadData.universidad.programas)
         {
-            list.Add($"- {p.nombre}: {p.descripcion}");
+            list.Add($"- {p.nombre}: {p.descripcion} (facultad: {p.facultad}) (SNIES: {p.codigo_SNIES}) (costo: {p.costo.valor_semestre} , {p.costo.moneda})");
         }
+
         return list;
     }
+
 
     public enum Reaction
     {
@@ -177,28 +180,6 @@ Programas disponibles:
             result.reaction = Reaction.Neutral;
 
         return result;
-    }
-
-    [System.Serializable]
-    public class UniversidadData
-    {
-        public Universidad universidad;
-    }
-
-    [System.Serializable]
-    public class Universidad
-    {
-        public string nombre;
-        public string sigla;
-        public string sede;
-        public Programa[] programas;
-    }
-
-    [System.Serializable]
-    public class Programa
-    {
-        public string nombre;
-        public string descripcion;
     }
 
     [System.Serializable]

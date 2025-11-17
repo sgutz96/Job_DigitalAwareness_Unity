@@ -6,6 +6,7 @@
     "programas": [
       {
         "nombre": "Ingeniería de Sistemas",
+        "facultad": "Ingeniería",
         "codigo_SNIES": "2520",
         "titulo_otorgado": "Ingeniero(a) de Sistemas",
         "duracion": "10 Semestres",
@@ -42,6 +43,7 @@
       },
       {
         "nombre": "Ingeniería Electrónica",
+        "facultad": "Ingeniería",
         "codigo_SNIES": "2901",
         "titulo_otorgado": "Ingeniero(a) Electrónico(a)",
         "duracion": "10 Semestres",
@@ -79,6 +81,7 @@
       },
       {
         "nombre": "Ingeniería Aeronáutica",
+        "facultad": "Ingeniería",
         "codigo_SNIES": "4498",
         "titulo_otorgado": "Ingeniero(a) Aeronáutico(a)",
         "duracion": "10 Semestres",
@@ -112,6 +115,7 @@
       },
       {
         "nombre": "Ingeniería Mecatrónica",
+        "facultad": "Ingeniería",
         "codigo_SNIES": "6647",
         "titulo_otorgado": "Ingeniero(a) Mecatrónico(a)",
         "duracion": "10 Semestres",
@@ -149,6 +153,7 @@
       },
       {
         "nombre": "Ingeniería Multimedia",
+        "facultad": "Ingeniería",
         "codigo_SNIES": "103343",
         "titulo_otorgado": "Ingeniero(a) Multimedia",
         "duracion": "10 Semestres",
@@ -186,6 +191,7 @@
       },
       {
         "nombre": "Ingeniería de Sonido",
+        "facultad": "Ingeniería",
         "codigo_SNIES": "8453",
         "titulo_otorgado": "Ingeniero(a) de Sonido",
         "duracion": "10 Semestres",
