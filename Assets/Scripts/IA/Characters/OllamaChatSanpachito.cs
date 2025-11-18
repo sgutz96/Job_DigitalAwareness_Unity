@@ -22,7 +22,10 @@ public class OllamaChatSanpachito : MonoBehaviour
     public TextAsset universidadDatasetFile; // arrastra el JSON con la info de la universidad
     private UniversidadData universidadData;
 
+    public TTS_PS TTS;
     public SanpachitoMager manager;
+
+    
 
     public bool isThink = false;
 
@@ -146,6 +149,7 @@ Programas disponibles:
                 chatHistory.Add("Estudiante: " + userInput);
                 chatHistory.Add("Sanpachito: " + finalResponse);
 
+                TTS.Speak(finalResponse);
                 ChatResult chatResult = ProcessResponse(finalResponse);
 
                 Debug.Log("-------------------------------------");
