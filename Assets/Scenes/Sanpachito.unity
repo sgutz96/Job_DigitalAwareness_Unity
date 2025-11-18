@@ -322,7 +322,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &410087040
 Light:
   m_ObjectHideFlags: 0
@@ -485,6 +485,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 513514804}
+  - component: {fileID: 513514805}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -508,6 +509,21 @@ Transform:
   - {fileID: 1300068774}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -20, z: 0}
+--- !u!114 &513514805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513514803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e5d299b448e0e4ca1b109f57b2d935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voiceName: Microsoft David Desktop
+  rate: 0
+  volume: 100
 --- !u!1 &720199846
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,6 +1551,7 @@ MonoBehaviour:
     a orientar a los j\xF3venes para que encuentren su vocaci\xF3n y completen sus
     carreras universitarias con fe, esperanza y disciplina."
   universidadDatasetFile: {fileID: 4900000, guid: 4c0bdc4fda8eaa14b874d44b69ca52bf, type: 3}
+  TTS: {fileID: 513514805}
   manager: {fileID: 1260843590}
   isThink: 0
 --- !u!1 &1293250520
