@@ -203,7 +203,7 @@
           "vigencia": "7 años"
         },
         "costo": {
-          "valor_semestre": 9763000,
+          "valor_semestre": 7239000,
           "moneda": "COP"
         },
         "descripcion": "Programa centrado en acústica, diseño de sistemas de sonido y producción audiovisual. Fomenta la investigación, el enfoque humanista y la formación práctica en la industria del audio.",
@@ -221,7 +221,130 @@
           "Sonido en vivo y refuerzo sonoro",
           "Desarrollo tecnológico en audio"
         ]
-      }
+      },
+      {
+        "nombre": "Psicología",
+        "facultad": "Psicología",
+        "codigo_SNIES": "5132",
+        "titulo_otorgado": "Psicólogo(a)",
+        "duracion": "9 Semestres",
+        "modalidad": "Presencial",
+        "jornada": "Diurna",
+        "registro_calificado": {
+          "resolucion": "001560",
+          "fecha": "16 de febrero de 2022",
+          "vigencia": "7 años"
+        },
+        "costo": {
+          "valor_semestre": 7239000,
+          "moneda": "COP",
+          "nota": "Costos sujetos a resolución vigente"
+        },
+        "plan_de_estudios": {
+          "enlace": "Disponible en sitio web oficial"
+        },
+        "descripcion": "Programa presencial de 9 semestres que forma psicólogos con competencias disciplinares, profesionales, investigativas y humanísticas. Incluye prácticas y trabajo de grado en los últimos tres periodos, con énfasis en investigación, laboratorios y proyección social.",
+        "perfil_egresado": [
+          "Realiza evaluación e intervención psicológica en contextos clínicos, educativos y organizacionales.",
+          "Participa en procesos de investigación científica.",
+          "Diseña, ejecuta y evalúa programas de promoción, prevención e intervención.",
+          "Brinda asesoría, consultoría y apoyo en políticas de educación y salud mental.",
+          "Trabaja de manera interdisciplinaria para mejorar el bienestar y calidad de vida de las personas."
+        ],
+        "campos_de_accion": [
+          "Instituciones de salud, hospitales y centros de rehabilitación",
+          "Organismos gubernamentales y ONG",
+          "Instituciones educativas",
+          "Empresas públicas, privadas y multinacionales",
+          "Consultorios psicológicos y equipos interdisciplinarios"
+        ]
+      },
+      {
+  "nombre": "Administración de Empresas",
+  "facultad": "Ciencias Económicas y Administrativas",
+  "codigo_SNIES": "53056",
+  "titulo_otorgado": "Administrador(a) de Empresas",
+  "duracion": "9 Semestres",
+  "modalidad": "Presencial",
+  "jornada": "Diurna 1:00 p.m. a 6:00 p.m. / Nocturna 6:00 p.m. a 10:00 p.m. y sábado 7:00 a.m. a 1:00 p.m.",
+  "registro_calificado": {
+    "resolucion": "018305",
+    "fecha": "03 de octubre de 2023",
+    "vigencia": "7 años"
+  },
+  "costo": {
+    "valor_semestre": 5898000,
+    "moneda": "COP",
+    "nota": "Costos sujetos a resolución vigente"
+  },
+  "plan_de_estudios": {
+    "enlace": "Ver Plan de estudios"
+  },
+  "descripcion": "El programa forma administradores integrales con pensamiento crítico, capacidad de toma de decisiones en entornos cambiantes, habilidades de liderazgo, responsabilidad social y visión estratégica. Su currículo permite responder a necesidades del entorno organizacional, con énfasis en responsabilidad social, pensamiento estratégico y competitividad.",
+  "perfil_egresado": [
+    "Toma decisiones en entornos globales, complejos y competitivos.",
+    "Identifica herramientas para decisiones de inversión, financiamiento y gestión de recursos financieros.",
+    "Detecta oportunidades de emprendimiento y desarrollo de nuevos productos.",
+    "Trabaja con pensamiento estratégico y visión integral del negocio.",
+    "Gestiona procesos organizacionales con responsabilidad social y enfoque ético.",
+    "Utiliza tecnologías de información y comunicación en la gestión empresarial.",
+    "Formula y gestiona proyectos administrativos, financieros y de mercadeo.",
+    "Lidera equipos, mantiene buenas relaciones interpersonales y motiva a sus colaboradores.",
+    "Analiza variables socioeconómicas para la toma de decisiones.",
+    "Desarrolla acciones productivas que impactan positivamente el entorno social y económico."
+  ],
+  "campos_de_accion": [
+    "Áreas funcionales de organizaciones: finanzas, mercadeo, producción, administrativa y logística",
+    "Supervisión de procesos económicos, administrativos y contables",
+    "Formulación de proyectos empresariales y planes estratégicos",
+    "Procesos de mejoramiento continuo",
+    "Asesoría en administración, mercadeo, finanzas y talento humano",
+    "Análisis administrativo y financiero",
+    "Creación y dirección de empresas propias"
+  ]
+},
+{
+  "nombre": "Contaduría Pública",
+  "facultad": "Ciencias Económicas y Administrativas",
+  "codigo_SNIES": "3190",
+  "titulo_otorgado": "Contador(a) Público",
+  "duracion": "9 Semestres",
+  "modalidad": "Presencial",
+  "jornada": "Diurna / Nocturna",
+  "registro_calificado": {
+    "resolucion": "016054",
+    "fecha": "18 de diciembre de 2019",
+    "vigencia": "7 años"
+  },
+  "costo": {
+    "valor_semestre": 5512000,
+    "moneda": "COP",
+    "nota": "Costos sujetos a resolución vigente"
+  },
+  "plan_de_estudios": {
+    "enlace": "Ver Plan de estudios"
+  },
+  "descripcion": "El programa forma contadores con competencias disciplinares, humanísticas, técnicas e investigativas. Su plan de estudios integra áreas de fundamentación, instrumentación técnica e integración profesional, promoviendo una visión interdisciplinaria para el análisis del hecho económico y el control del flujo de riquezas.",
+  "perfil_egresado": [
+    "Comprende contextos organizacionales, económicos, políticos y sociales.",
+    "Posee habilidades técnicas y funcionales en asuntos contables.",
+    "Resuelve problemas y toma decisiones con criterio ético y pensamiento crítico.",
+    "Realiza análisis contables y financieros aplicando herramientas informáticas.",
+    "Aplica normativas y estándares en auditoría, impuestos y revisoría fiscal.",
+    "Ejecuta investigaciones aplicadas y genera informes financieros de calidad.",
+    "Comprende el impacto de la información contable en la toma de decisiones organizacionales."
+  ],
+  "campos_de_accion": [
+    "Controller empresarial",
+    "Auditor interno",
+    "Gerente financiero",
+    "Contador interno",
+    "Auditor o revisor fiscal",
+    "Asesor tributario o consultor externo",
+    "Preparador y analista de estados financieros"
+  ]
+}
+
     ]
   }
 }
